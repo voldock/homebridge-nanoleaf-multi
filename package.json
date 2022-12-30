@@ -1,0 +1,50 @@
+{
+  "name": "homebridge-nanoleaf-multi",
+  "description": "",
+  "homepage": "https://gitlab.com/5131/nanoleaf/homebridge-nanoleaf-multi#readme",
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "version": "1.0.1",
+  "deprecated": false,
+  "author": {
+    "name": "Samuel Goodell"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/5131/nanoleaf/homebridge-nanoleaf-multi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/5131/nanoleaf/homebridge-nanoleaf-multi.git"
+  },
+  "scripts": {
+    "clean": "rm -rf dist node_modules package-lock.json",
+    "build": "webpack",
+    "build:development": "NODE_ENV=development webpack",
+    "build:production": "NODE_ENV=production webpack"
+  },
+  "engines": {
+    "homebridge": ">=0.4.0",
+    "node": ">=8.0.0"
+  },
+  "main": "dist/index.js",
+  "dependencies": {
+    "async-lock": "^1.2.4",
+    "axios": "^0.19.2",
+    "colors": "^1.4.0",
+    "helpers-for-homebridge": "^2.0",
+    "nanoleaf-client-multi": "^1.0",
+    "rwlock": "^5.0.0",
+    "simple-node-logger": "^21.8.12"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.18.10",
+    "@manganese/prettier-configuration": "^1.0",
+    "@types/node": "^18.7.14",
+    "@types/rwlock": "^5.0.3",
+    "babel-loader": "^8.2.5",
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.8.2",
+    "webpack-cli": "^4.10.0"
+  }
+}
